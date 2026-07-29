@@ -16,7 +16,7 @@ function App() {
         </div>
 
         <div className="right">
-          <h3>Hello, I'm</h3>
+          <h3>Hey, I'm</h3>
 
           <h1>Tanish Ahujaa</h1>
 
