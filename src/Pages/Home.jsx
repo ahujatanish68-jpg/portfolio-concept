@@ -5,7 +5,7 @@ function Home() {
       <div className="hero-left">
 
         <span className="hero-tag">
-          🚀 Premium Digital Agency
+          🚀 Premium Media, Music & Digital Agency
         </span>
 
         <h1>
