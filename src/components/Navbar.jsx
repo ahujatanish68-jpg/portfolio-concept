@@ -1,21 +1,104 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
+
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Scroll to a section only if we're on the homepage
+  const scrollToSection = (id) => {
+    if (location.pathname === "/") {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
   return (
     <nav className="navbar">
+      <Link to="/" className="logo">
+        <span>AD</span>
 
-      <div className="logo">
-        <h2>AD Media Networks</h2>
-      </div>
+        <div>
+          <h2>AD Media</h2>
+          <p>Networks</p>
+        </div>
+      </Link>
 
       <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <Link to="/" onClick={() => scrollToSection("home")}>
+            Home
+          </Link>
+        </li>
+
+        <li
+          className="services-item"
+
+          onMouseEnter={() => setMenuOpen(true)}
+
+          onMouseLeave={() => setMenuOpen(false)}
+        >
+          <span>Services ▾</span>
+
+          {menuOpen && (
+            <div  className="mega-menu"
+             
+            >
+              <div className="mega-column">
+                <h3>📰 Media & News</h3>
+
+                <Link to="/media">Photography</Link>
+                <Link to="/media">Videography</Link>
+                <Link to="/media">PR & Branding</Link>
+                <Link to="/media">Content Creation</Link>
+              </div>
+
+              <div className="mega-column">
+                <h3>💻 Digital Technology</h3>
+
+                <Link to="/digital">Website Development</Link>
+                <Link to="/digital">App Development</Link>
+                <Link to="/digital">AI Solutions</Link>
+                <Link to="/digital">SEO</Link>
+              </div>
+
+              <div className="mega-column">
+                <h3>🎵 Music Production</h3>
+
+                <Link to="/music">Recording</Link>
+                <Link to="/music">Mixing</Link>
+                <Link to="/music">Mastering</Link>
+                <Link to="/music">Podcast Production</Link>
+              </div>
+            </div>
+          )}
+        </li>
+
+        <li>
+          <Link to="/" onClick={() => scrollToSection("about")}>
+            About
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/" onClick={() => scrollToSection("portfolio")}>
+            Portfolio
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/" onClick={() => scrollToSection("contact")}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
-      <button className="nav-btn">Get Started</button>
-
+      <button className="nav-btn">Get Quote</button>
     </nav>
   );
 }

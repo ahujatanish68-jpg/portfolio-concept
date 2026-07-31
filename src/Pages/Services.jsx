@@ -1,66 +1,75 @@
+import { Link } from "react-router-dom";
+
 function Services() {
-  const services = [
-    {
-      title: "Website Development",
-      desc: "Modern, fast and responsive websites designed to grow your business.",
-      icon: "💻",
-    },
-    {
-      title: "Digital Marketing",
-      desc: "SEO, Google Ads, Meta Ads and strategies that generate real results.",
-      icon: "📈",
-    },
-    {
-      title: "Branding",
-      desc: "Professional logos, brand identity and creative design solutions.",
-      icon: "🎨",
-    },
-    {
-      title: "Social Media",
-      desc: "Instagram, Facebook and LinkedIn management with engaging content.",
-      icon: "📱",
-    },
-    {
-      title: "Photography",
-      desc: "Professional product and business photography for your brand.",
-      icon: "📸",
-    },
-    {
-      title: "Video Editing",
-      desc: "Creative reels, advertisements and promotional videos.",
-      icon: "🎬",
-    },
-  ];
-
   return (
-    <section id="services" className="services">
+    <section className="services-page">
 
-      <h4>OUR SERVICES</h4>
+      <div className="services-hero">
 
-      <h2>Everything Your Business Needs</h2>
+        <h4>OUR EXPERTISE</h4>
 
-      <p className="service-text">
-        We help brands grow online with creative ideas,
-        modern technology and result-driven marketing.
-      </p>
+        <h1>
+          Three Powerful Divisions.
+          <br />
+          One Creative Partner.
+        </h1>
 
-      <div className="services-grid">
+        <p>
+          AD Media Networks combines creative storytelling, cutting-edge
+          technology, and professional music production to help brands grow,
+          engage audiences, and create unforgettable experiences.
+        </p>
 
-        {services.map((service, index) => (
+      </div>
 
-          <div className="service-card" key={index}>
+      <div className="division-grid">
 
-            <div className="service-icon">
-              {service.icon}
-            </div>
+        <Link to="/media" className="division-card media-card">
 
-            <h3>{service.title}</h3>
+          <div className="division-icon">📰</div>
 
-            <p>{service.desc}</p>
+          <h2>Media & News</h2>
 
-          </div>
+          <p>
+            Photography, Videography, News Coverage,
+            Social Media, PR & Brand Communication.
+          </p>
 
-        ))}
+          <span>Explore Division →</span>
+
+        </Link>
+
+
+        <Link to="/digital" className="division-card digital-card">
+
+          <div className="division-icon">💻</div>
+
+          <h2>Digital Technology</h2>
+
+          <p>
+            Website Development, AI Solutions,
+            UI/UX Design, SEO & Digital Marketing.
+          </p>
+
+          <span>Explore Division →</span>
+
+        </Link>
+
+
+        <Link to="/music" className="division-card music-card">
+
+          <div className="division-icon">🎵</div>
+
+          <h2>Music Production</h2>
+
+          <p>
+            Recording, Mixing, Mastering,
+            Podcasts and Audio Branding.
+          </p>
+
+          <span>Explore Division →</span>
+
+        </Link>
 
       </div>
 

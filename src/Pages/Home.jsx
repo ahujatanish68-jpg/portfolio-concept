@@ -4,32 +4,41 @@ function Home() {
 
       <div className="hero-left">
 
-        <h4>WELCOME TO AD MEDIA NETWORKS</h4>
+        <span className="hero-tag">
+          🚀 Premium Digital Agency
+        </span>
 
         <h1>
-          Transforming Ideas Into
+          Building Powerful
           <br />
-          Digital Success
+          Brands Through
+          <span className="highlight"> Media & Technology</span>
         </h1>
 
         <p>
-          AD Media Networks is a full-service digital agency delivering premium
-          websites, branding, digital marketing, social media management,
-          photography, and creative media solutions that help businesses grow,
-          connect, and succeed in the digital world.
+          AD Media Networks is a creative agency specializing in Media &
+          News, Digital Technology, and Music Production. We create
+          high-quality digital experiences that help brands grow, engage,
+          and stand out.
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">Get a Free Quote</button>
-          <button className="secondary-btn">View Portfolio</button>
+
+          <button className="primary-btn">
+            Get Free Quote
+          </button>
+
+          <button className="secondary-btn">
+            View Portfolio
+          </button>
+
         </div>
 
-        {/* 👇 Add the hero stats here */}
         <div className="hero-stats">
 
           <div>
             <h3>250+</h3>
-            <span>Projects</span>
+            <span>Projects Delivered</span>
           </div>
 
           <div>
@@ -38,8 +47,8 @@ function Home() {
           </div>
 
           <div>
-            <h3>24/7</h3>
-            <span>Support</span>
+            <h3>5+</h3>
+            <span>Years Experience</span>
           </div>
 
         </div>
@@ -48,10 +57,29 @@ function Home() {
 
       <div className="hero-right">
 
-        <img
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=700"
-          alt="Digital Agency"
-        />
+        <div className="hero-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900"
+            alt="AD Media Networks"
+          />
+
+          <div className="floating-card card1">
+            ⭐⭐⭐⭐⭐
+            <p>Trusted by Businesses</p>
+          </div>
+
+          <div className="floating-card card2">
+            🚀
+            <h4>Digital Growth</h4>
+          </div>
+
+          <div className="floating-card card3">
+            🎬
+            <h4>Creative Media</h4>
+          </div>
+
+        </div>
 
       </div>
 
