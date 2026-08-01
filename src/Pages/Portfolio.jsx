@@ -28,7 +28,7 @@ function Portfolio() {
 
   return (
     <section id="portfolio" className="portfolio">
-      <h4>OUR WORK</h4>
+      <h4>Portfolio</h4>
       <h2>Recent Projects</h2>
 
       <p className="portfolio-text">

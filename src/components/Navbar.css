@@ -7,6 +7,8 @@
     transform:translateX(-50%);
     width:92%;
     max-width:1400px;
+    border-radius:20px;
+    z-index:9999;
 
     display:flex;
     justify-content:space-between;
@@ -14,17 +16,19 @@
 
     padding:18px 38px;
 
-    background:rgba(17,24,39,.72);
-    backdrop-filter:blur(18px);
+    background: rgba(255,255,255,.18);
 
-    border:1px solid var(--border);
+    backdrop-filter: blur(40px);
+
+    -webkit-backdrop-filter: blur(40px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+
+        0 8px 32px rgba(0,0,0,.35);
+
     border-radius:20px;
-
-    z-index:9999;
-
-    box-shadow:0 12px 40px rgba(0,0,0,.35);
-
-    transition:.35s;
 }
 
 .logo{
@@ -35,7 +39,6 @@
 }
 
 .logo span{
-
     width:54px;
     height:54px;
 
@@ -45,26 +48,27 @@
 
     border-radius:14px;
 
-    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    background:#E31E24 !important;
 
-    color:white;
+    color:#fff;
 
     font-size:22px;
-    font-weight:700;
+    font-weight:800;
+
+    box-shadow:0 10px 25px rgba(227,30,36,.35);
 }
 
 .logo h2{
-
-    color:white;
+    color:#E31E24;
     font-size:24px;
-    font-weight:700;
+    font-weight:800;
 }
 
 .logo p{
-
-    color:var(--paragraph);
+    color:#ffffff;
     font-size:13px;
-    letter-spacing:2px;
+    letter-spacing:3px;
+    text-transform:uppercase;
 }
 
 .nav-links{
@@ -93,12 +97,12 @@
 .nav-links a:hover,
 .services-item span:hover{
 
-    color:#38bdf8;
+    color:#ef4444;
 }
 
 .nav-btn{
 
-    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    background:linear-gradient(135deg,#E31E24,#b80d12);
 
     color:white;
 
@@ -120,7 +124,7 @@
 
     transform:translateY(-3px);
 
-    box-shadow:0 15px 35px rgba(56,189,248,.35);
+    box-shadow:0 15px 35px rgba(227,30,36,.45);
 }/* ================= MEGA MENU ================= */
 
 .services-item{
@@ -183,6 +187,20 @@
 
 .mega-column a:hover{
     background:#1e293b;
-    color:#38bdf8;
+    color:#ef4444;
     transform:translateX(6px);
+}.navbar::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    pointer-events:none;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,0)
+    );
+
+    opacity:.9;
 }

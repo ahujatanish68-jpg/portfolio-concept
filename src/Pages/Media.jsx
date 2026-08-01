@@ -1,82 +1,71 @@
+import "./Media.css";
 function Media() {
   return (
     <>
-
-      <section className="service-hero media-hero">
+      {/* Hero Section */}
+      <section className="media-hero">
 
         <div className="service-content">
 
           <h4>MEDIA & NEWS</h4>
 
-          <h1>
-            Powerful Stories.
-            <br />
-            Professional Coverage.
-          </h1>
+<h1>
+    Empowering Brands Through
+    <span className="highlight"> Strategic Media</span>
+</h1>
 
-          <p>
-            From photography and videography to digital storytelling,
-            AD Media Networks helps brands capture attention with
-            impactful visual content.
-          </p>
+<p>
+    We deliver premium media solutions including television production,
+    news coverage, public relations, digital publishing, content creation,
+    and brand storytelling—helping businesses build credibility, expand
+    their reach, and create meaningful connections with their audience.
+</p>
 
-          <button className="primary-btn">
-            Get Started
-          </button>
+<div className="hero-buttons">
+    <button className="primary-btn">Explore Services</button>
+
+    <button className="secondary-btn">Our Portfolio</button>
+</div>
 
         </div>
 
       </section>
 
+      {/* Services */}
+      <section className="media-services">
 
-      <section className="service-section">
+        <h2>Media & News Services</h2>
 
-        <h2>Our Media Services</h2>
+        <div className="media-options">
 
-        <div className="service-grid">
-
-          <div className="service-box">
-            📸
-            <h3>Photography</h3>
-            <p>
-              Corporate shoots, products,
-              fashion and event photography.
-            </p>
-          </div>
-
-          <div className="service-box">
-            🎥
-            <h3>Videography</h3>
-            <p>
-              Commercial films,
-              social media reels and cinematic videos.
-            </p>
-          </div>
-
-          <div className="service-box">
-            📰
+          <div className="media-option-card">
+           <span className="icon">📰</span>
             <h3>News Coverage</h3>
-            <p>
-              Interviews,
-              press events,
-              media reporting and live coverage.
-            </p>
+            <p>Latest news updates and coverage.</p>
           </div>
 
-          <div className="service-box">
-            📢
-            <h3>Brand Promotion</h3>
-            <p>
-              PR campaigns,
-              influencer marketing
-              and promotional content.
-            </p>
+          <div className="media-option-card">
+            <span className="icon">🎥</span>
+            <h3>Video Production</h3>
+            <p>Creative video production.</p>
+          </div>
+
+          <div className="media-option-card">
+            <span className="icon">📢</span>
+
+            <h3>Public Relations</h3>
+            <p>Brand promotion and media.</p>
+          </div>
+
+          <div className="media-option-card">
+            <span className="icon">🌐</span>
+            <h3>Digital Media</h3>
+            <p>Online presence and campaigns.</p>
           </div>
 
         </div>
 
       </section>
-
     </>
   );
 }
