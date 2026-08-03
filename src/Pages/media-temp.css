@@ -2,7 +2,7 @@
     position:relative;
     overflow:hidden;
 
-    min-height:65vh;
+    min-height:45vh;
 
     display:flex;
     align-items:center;   /* Start content from the top */
@@ -17,10 +17,10 @@
         url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600");
 
     background-size:cover;
-    background-position:center top;
+    background-position:center center;
 }
 .media-hero{
-    padding-top:140px;
+    padding-top:100px;
 }
 
 .service-content{
@@ -107,14 +107,15 @@
 }
 
 .media-services{
-    padding:80px 8% 100px;
+    padding:40px 8% 50px;
+    scroll-margin-top: 120px;   
 
     text-align:center;
 }
 
 .media-services h2{
     font-size:34px;
-    margin-bottom:35px;
+    margin-bottom:20px;
 }
 
 .media-options{

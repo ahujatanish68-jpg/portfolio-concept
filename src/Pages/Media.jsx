@@ -1,5 +1,17 @@
 import "./media-temp.css";
+import { useNavigate } from "react-router-dom";
 function Media() {
+  
+const navigate = useNavigate();
+const goToPortfolio = () => {
+
+  navigate("/", {
+    state: {
+      section: "portfolio"
+    }
+  });
+
+};
   return (
     <>
       {/* Hero Section */}
@@ -22,9 +34,14 @@ function Media() {
 </p>
 
 <div className="hero-buttons">
-    <button className="primary-btn">Explore Services</button>
+    <button className="primary-btn">Explore Services ▼ </button>
 
-    <button className="secondary-btn">Our Portfolio</button>
+    <button 
+  className="secondary-btn"
+  onClick={goToPortfolio}
+>
+  Our Portfolio
+</button>
 </div>
 
         </div>
