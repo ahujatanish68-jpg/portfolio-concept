@@ -1,4 +1,4 @@
-import "./Media.css";
+import "./media-temp.css";
 function Media() {
   return (
     <>
