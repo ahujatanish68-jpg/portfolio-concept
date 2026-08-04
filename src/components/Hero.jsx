@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
 
   const scrollToPortfolio = () => {
@@ -9,7 +11,6 @@ function Hero() {
       });
     }
   };
-
 
   return (
     <section className="hero">
@@ -23,16 +24,14 @@ function Hero() {
           Marketing, SEO, Branding, and Paid Advertising.
         </p>
 
-
         <div className="hero-buttons">
+
+          <Link to="/get-quote" className="hero-link-btn">
+            Get Free Quote
+          </Link>
 
           <button onClick={scrollToPortfolio}>
             View Portfolio
-          </button>
-
-
-          <button>
-            Our Services
           </button>
 
         </div>

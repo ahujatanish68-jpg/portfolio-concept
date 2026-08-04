@@ -11,35 +11,32 @@ function Navbar() {
   const navigate = useNavigate();
 
 
-  const scrollToSection = (id) => {
+ const scrollToSection = (id) => {
 
-    if (location.pathname !== "/") {
+  if (location.pathname !== "/") {
 
-      navigate("/", {
-        state: {
-          section: id
-        }
+    navigate("/", {
+      state: {
+        section: id
+      }
+    });
+
+  } else {
+
+    const section = document.getElementById(id);
+
+    if (section) {
+
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
       });
-
-    } else {
-
-      setTimeout(() => {
-
-        const section = document.getElementById(id);
-
-        if (section) {
-
-          section.scrollIntoView({
-            behavior: "smooth"
-          });
-
-        }
-
-      }, 100);
 
     }
 
-  };
+  }
+
+};
 
 
   return (
@@ -72,12 +69,9 @@ function Navbar() {
 
         <li>
 
-          <Link 
-            to="/"
-            onClick={() => scrollToSection("home")}
-          >
-            Home
-          </Link>
+          <span className="nav-item" onClick={() => scrollToSection("home")}>
+    Home
+</span>
 
         </li>
 
@@ -195,12 +189,11 @@ function Navbar() {
 
         <li>
 
-          <Link
-            to="/"
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </Link>
+          <span
+ onClick={() => scrollToSection("about")}
+>
+ About
+</span>
 
         </li>
 
@@ -209,12 +202,11 @@ function Navbar() {
 
         <li>
 
-          <Link
-            to="/"
-            onClick={() => scrollToSection("portfolio")}
-          >
-            Portfolio
-          </Link>
+          <span
+ onClick={() => scrollToSection("portfolio")}
+>
+ Portfolio
+</span>
 
         </li>
 
@@ -223,12 +215,11 @@ function Navbar() {
 
         <li>
 
-          <Link
-            to="/"
-            onClick={() => scrollToSection("contact")}
-          >
-            Contact
-          </Link>
+          <span
+ onClick={() => scrollToSection("contact")}
+>
+ Contact
+</span>
 
         </li>
 
@@ -238,10 +229,9 @@ function Navbar() {
 
 
 
-      <button className="nav-btn">
-        Get Quote
-      </button>
-
+      <Link to="/get-quote" className="nav-btn">
+  Get Quote
+</Link>
 
 
     </nav>

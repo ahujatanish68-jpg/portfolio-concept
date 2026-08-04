@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import Navbar from "./components/Navbar";
 import TrustedBy from "./components/TrustedBy";
@@ -9,12 +10,50 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
 import Contact from "./Pages/Contact";
-
+import GetQuote from "./Pages/GetQuote";
 import Media from "./Pages/Media";
 import Digital from "./Pages/Digital";
 import MusicProduction from "./Pages/MusicProduction";
 
 function HomePage() {
+
+  const location = useLocation();
+
+
+  useEffect(() => {
+
+    const section = location.state?.section;
+
+
+    if(section){
+
+      setTimeout(() => {
+
+        const element = document.getElementById(section);
+
+
+        if(element){
+
+          element.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+          });
+
+        }
+
+
+      },500);
+
+
+      window.history.replaceState({}, document.title);
+
+    }
+
+
+  },[location]);
+
+
+
   return (
     <>
       <div id="home">
@@ -29,22 +68,24 @@ function HomePage() {
 
       <FeaturedProjects />
 
+
       <div id="about">
         <About />
       </div>
+
 
       <div id="portfolio">
         <Portfolio />
       </div>
 
+
       <div id="contact">
         <Contact />
       </div>
+
     </>
   );
 }
-
-
 
 function App() {
   return (
@@ -53,6 +94,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/get-quote" element={<GetQuote />} />
 
         <Route path="/media" element={<Media />} />
 

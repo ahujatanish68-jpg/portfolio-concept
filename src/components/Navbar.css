@@ -79,7 +79,14 @@
 
     list-style:none;
 }
-
+.nav-item {
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+.nav-item:hover {
+    color: #E31E24;
+}
 .nav-links a,
 .services-item span{
 
@@ -203,4 +210,25 @@
     );
 
     opacity:.9;
+}/* Prevent text cursor / text selection inside navbar */
+.navbar,
+.navbar * {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Keep normal pointer on links */
+.nav-links a,
+.services-item span,
+.mega-column a,
+.nav-btn {
+    cursor: pointer;
+}
+
+/* Disable text cursor on logo text */
+.logo,
+.logo h2,
+.logo p,
+.logo span {
+    cursor: pointer;
 }
