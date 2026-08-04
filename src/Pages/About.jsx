@@ -5,29 +5,43 @@ function About() {
 
         <h4>ABOUT US</h4>
 
-        <h2>Empowering Businesses Through Digital Innovation</h2>
+       <h2>Connecting Stories, Technology & Creativity Through Innovation</h2>
 
-        <p>
-          At <strong>AD Media Networks</strong>, we are passionate about helping
-          businesses establish a strong digital presence. We combine creativity,
-          technology, and marketing expertise to deliver solutions that help our
-          clients stand out in today's competitive market.
-        </p>
+<p>
+  <strong>AD Media Networks</strong> is a dynamic media and technology company
+  built around three powerful divisions — Media & News, Digital Technology, and
+  Music Production. 
+</p>
 
-        <p>
-          Our team specializes in website design and development, digital
-          marketing, branding, social media management, SEO, content creation,
-          photography, and video production. Whether you're a startup, a growing
-          business, or an established brand, we create customized strategies to
-          help you achieve your goals.
-        </p>
+<p>
+  Through our <strong>Media & News division</strong>, we deliver trusted and
+  engaging news coverage at local, national, and global levels, bringing
+  important stories, current affairs, and impactful insights to audiences. Our
+  focus is to create a reliable media platform that keeps people informed and
+  connected with the world around them.
+</p>
 
-        <p>
-          We believe every business has a unique story. Our mission is to bring
-          that story to life through innovative designs, engaging content, and
-          effective marketing campaigns that connect with your audience and drive
-          measurable growth.
-        </p>
+<p>
+  Our <strong>Digital Technology division</strong> empowers businesses with
+  modern solutions including AI-powered marketing, digital branding, automation,
+  website development, and innovative strategies that help brands grow in the
+  digital era. We transform ideas into powerful online experiences that drive
+  engagement and success.
+</p>
+
+<p>
+  With our <strong>Music Production division</strong>, we provide professional
+  recording studio services, song production, artist support, and video launch
+  solutions. From creating original music to producing visual content, we help
+  artists bring their creative vision to life.
+</p>
+
+<p>
+  At <strong>AD Media Networks</strong>, we believe in the power of information,
+  innovation, and creativity to shape the future. Our mission is to deliver
+  high-quality media, technology, and entertainment solutions that inspire,
+  connect, and create lasting impact.
+</p>
 
         <div className="about-stats">
 

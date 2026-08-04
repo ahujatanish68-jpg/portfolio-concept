@@ -316,25 +316,26 @@ box-shadow:
 }
 
 .about h2{
+    max-width:1400px;
     font-size:58px;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .about p{
-    max-width:900px;
+    max-width:1200px;
     font-size:18px;
     color:var(--paragraph);
-    line-height:2;
+    line-height:1.8;
     margin:0 auto;          /* centers the paragraph block */
 
     text-align:center;      
 }
 
 .about-stats{
-    margin-top:60px;
+    margin-top:10px;
     display:flex;
     justify-content:center;
-    gap:60px;
+    gap:100px;
     flex-wrap:wrap;
 }
 
