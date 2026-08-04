@@ -42,21 +42,20 @@ function Home() {
 
 
         <h1>
-          Building Powerful
-          <br />
-          Brands Through
-          <span className="highlight">
-            {" "}Media & Technology
-          </span>
-        </h1>
+ Delivering Trusted News.
+
+  <br />
+  Building Digital Solutions.
+  <br />
+  <span className="highlight">
+    Music creation.
+  </span>
+</h1>
 
 
 
         <p>
-          AD Media Networks is a creative agency specializing in Media &
-          News, Digital Technology, and Music Production. We create
-          high-quality digital experiences that help brands grow, engage,
-          and stand out.
+          AD Media Networks brings together Digital News Publishing, Professional Media Production, and Digital Technology Solutions under one roof. From breaking news and podcast production to AI-powered business automation and digital marketing, we help brands, creators, and businesses connect, engage, and grow.
         </p>
 
 
@@ -131,13 +130,13 @@ function Home() {
 
 
           <img
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900"
+            src="https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=1200"
             alt="AD Media Networks"
           />
 
 
 
-          <div className="floating-card card1">
+          <div className="floating-card card3">
 
             ⭐⭐⭐⭐⭐
 
@@ -152,10 +151,10 @@ function Home() {
 
           <div className="floating-card card2">
 
-            🚀
+            🎤
 
             <h4>
-              Digital Growth
+              Digital Technology
             </h4>
 
           </div>
@@ -163,12 +162,12 @@ function Home() {
 
 
 
-          <div className="floating-card card3">
+          <div className="floating-card card1">
 
-            🎬
+            📰
 
             <h4>
-              Creative Media
+              Media & News
             </h4>
 
           </div>
@@ -178,15 +177,13 @@ function Home() {
 
           <div className="floating-card card4">
 
-            📈
+            🎵
 
             <h4>
-              500M+
+              Music Production
             </h4>
 
-            <p>
-              Monthly Media Reach
-            </p>
+           
 
           </div>
 

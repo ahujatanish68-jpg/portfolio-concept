@@ -16,25 +16,32 @@ function About() {
 <p>
   Through our <strong>Media & News division</strong>, we deliver trusted and
   engaging news coverage at local, national, and global levels, bringing
-  important stories, current affairs, and impactful insights to audiences. Our
-  focus is to create a reliable media platform that keeps people informed and
-  connected with the world around them.
+  important stories, current affairs, and impactful insights to audiences.while 
+  building a trusted source of information that keepscommunities connected with 
+  the world.
 </p>
 
-<p>
-  Our <strong>Digital Technology division</strong> empowers businesses with
-  modern solutions including AI-powered marketing, digital branding, automation,
-  website development, and innovative strategies that help brands grow in the
-  digital era. We transform ideas into powerful online experiences that drive
-  engagement and success.
-</p>
+  <p>
 
-<p>
-  With our <strong>Music Production division</strong>, we provide professional
-  recording studio services, song production, artist support, and video launch
-  solutions. From creating original music to producing visual content, we help
-  artists bring their creative vision to life.
-</p>
+    Our <strong>Digital Technology division</strong> helps businesses grow in
+    the digital era through AI-powered marketing, digital branding,
+    automation, website development, and innovative technology solutions.
+    We create powerful digital strategies that improve brand visibility,
+    customer engagement, and business growth.
+
+  </p>
+
+  <p>
+
+    Our <strong>Music Production division</strong> provides professional studio
+
+    recording, song production, artist support, and video launch solutions.
+
+    From creating original music to producing engaging visual content, we help
+
+    artists transform their creative ideas into memorable experiences.
+
+  </p>
 
 <p>
   At <strong>AD Media Networks</strong>, we believe in the power of information,
