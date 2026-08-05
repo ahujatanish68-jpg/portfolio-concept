@@ -11,6 +11,17 @@ function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
+  if (mobileMenu) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [mobileMenu]);
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 992) {
         setMobileMenu(false);
