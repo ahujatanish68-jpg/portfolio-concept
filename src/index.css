@@ -144,7 +144,7 @@ body{
 }
 
 .hero-left h1{
-    font-size:clamp(38px,4vw,150px);
+    font-size:clamp(63px,4vw,150px);
     font-weight:750;
     line-height:1.05;
     letter-spacing:-1.05px;
@@ -1917,176 +1917,117 @@ input[type="submit"],
     }
 
 
-}/* ================= MOBILE HERO ADJUSTMENT ================= */
+}/* ================= HERO MOBILE FIX ================= */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-    /* keep hero image right side */
     .hero{
-        flex-direction:row;
-        align-items:center;
-        gap:15px;
-        padding:110px 20px 40px;
+        flex-direction:column;
+        align-items:flex-start;
+        text-align:left;
+        gap:40px;
     }
 
 
     .hero-left{
-        width:55%;
-        text-align:left;
+        width:100%;
     }
 
-
-    .hero-right{
-        width:45%;
-        margin-top:0;
-    }
-
-
-
-    /* Stats horizontal */
 
     .hero-stats{
 
         display:flex;
-
         flex-direction:row;
+        justify-content:flex-start;
+        align-items:center;
 
-        gap:15px;
+        gap:25px;
+
+        flex-wrap:nowrap;
 
         margin-top:25px;
-
-        justify-content:flex-start;
-
     }
 
 
     .hero-stats div{
-
         text-align:left;
-
     }
 
 
     .hero-stats h3{
 
-        font-size:22px;
+        font-size:28px;
 
     }
 
 
     .hero-stats span{
 
-        font-size:9px;
+        font-size:11px;
 
         white-space:nowrap;
 
     }
 
 
+    .hero-right{
 
-    /* Floating cards visible */
-
-    .floating-card{
-
-        display:block;
-
-        padding:8px 12px;
-
-        width:90px;
-
-        border-radius:12px;
+        width:100%;
+        margin-top:20px;
 
     }
 
 
-    .floating-card h4{
+    .hero-image{
 
-        font-size:10px;
-
-    }
-
-
-    .floating-card p{
-
-        font-size:8px;
+        width:100%;
 
     }
 
 
+}@media(max-width:900px){
 
-    /* smaller floating positions */
+.floating-card{
 
-    .card1{
+    padding:10px 12px;
 
-        top:10px;
+    border-radius:12px;
 
-        left:-15px;
-
-    }
-
-
-    .card2{
-
-        bottom:15px;
-
-        left:-20px;
-
-    }
-
-
-    .card3{
-
-        right:-20px;
-
-        top:55%;
-
-    }
-
-
-    .card4{
-
-        top:-10px;
-
-        right:0;
-
-    }
-
+    transform:scale(.65);
 
 }
 
 
+.floating-card h4{
 
-/* Extra small phones */
+    font-size:12px;
 
-@media(max-width:480px){
-
-    .hero-stats{
-
-        gap:10px;
-
-    }
+}
 
 
-    .hero-stats h3{
+.floating-card p{
 
-        font-size:18px;
+    font-size:10px;
 
-    }
+}
 
+.card1{
+    top:20px;
+    left:-10px;
+}
 
-    .hero-stats span{
+.card2{
+    bottom:20px;
+    left:-10px;
+}
 
-        font-size:8px;
+.card3{
+    right:-10px;
+}
 
-    }
-
-
-    .floating-card{
-
-        width:75px;
-
-        padding:6px;
-
-    }
+.card4{
+    top:10px;
+    right:10px;
+}
 
 }
