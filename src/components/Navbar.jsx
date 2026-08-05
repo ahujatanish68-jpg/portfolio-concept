@@ -60,25 +60,16 @@ useEffect(() => {
       {/* LOGO */}
 
       <Link to="/" className="logo">
+  <span>AD</span>
 
-        <span>AD</span>
+  <div>
+    <h2>AD Media</h2>
+    <p>Networks</p>
+  </div>
+</Link>
 
-        <div>
-
-          <h2>AD Media</h2>
-
-          <p>Networks</p>
-
-        </div>
-
-      </Link>
-
-
-
-      {/* NAV LINKS */}
-
-      <ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
-        <div
+{/* Hamburger */}
+<div
   className="hamburger"
   onClick={() => setMobileMenu(!mobileMenu)}
 >
@@ -87,14 +78,7 @@ useEffect(() => {
   <span></span>
 </div>
 
-
-        <li>
-
-          <span className="nav-item" onClick={() => scrollToSection("home")}>
-    Home
-</span>
-
-        </li>
+<ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
 
 
 
