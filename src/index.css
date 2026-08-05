@@ -1917,4 +1917,176 @@ input[type="submit"],
     }
 
 
+}/* ================= MOBILE HERO ADJUSTMENT ================= */
+
+@media(max-width:768px){
+
+    /* keep hero image right side */
+    .hero{
+        flex-direction:row;
+        align-items:center;
+        gap:15px;
+        padding:110px 20px 40px;
+    }
+
+
+    .hero-left{
+        width:55%;
+        text-align:left;
+    }
+
+
+    .hero-right{
+        width:45%;
+        margin-top:0;
+    }
+
+
+
+    /* Stats horizontal */
+
+    .hero-stats{
+
+        display:flex;
+
+        flex-direction:row;
+
+        gap:15px;
+
+        margin-top:25px;
+
+        justify-content:flex-start;
+
+    }
+
+
+    .hero-stats div{
+
+        text-align:left;
+
+    }
+
+
+    .hero-stats h3{
+
+        font-size:22px;
+
+    }
+
+
+    .hero-stats span{
+
+        font-size:9px;
+
+        white-space:nowrap;
+
+    }
+
+
+
+    /* Floating cards visible */
+
+    .floating-card{
+
+        display:block;
+
+        padding:8px 12px;
+
+        width:90px;
+
+        border-radius:12px;
+
+    }
+
+
+    .floating-card h4{
+
+        font-size:10px;
+
+    }
+
+
+    .floating-card p{
+
+        font-size:8px;
+
+    }
+
+
+
+    /* smaller floating positions */
+
+    .card1{
+
+        top:10px;
+
+        left:-15px;
+
+    }
+
+
+    .card2{
+
+        bottom:15px;
+
+        left:-20px;
+
+    }
+
+
+    .card3{
+
+        right:-20px;
+
+        top:55%;
+
+    }
+
+
+    .card4{
+
+        top:-10px;
+
+        right:0;
+
+    }
+
+
+}
+
+
+
+/* Extra small phones */
+
+@media(max-width:480px){
+
+    .hero-stats{
+
+        gap:10px;
+
+    }
+
+
+    .hero-stats h3{
+
+        font-size:18px;
+
+    }
+
+
+    .hero-stats span{
+
+        font-size:8px;
+
+    }
+
+
+    .floating-card{
+
+        width:75px;
+
+        padding:6px;
+
+    }
+
 }
