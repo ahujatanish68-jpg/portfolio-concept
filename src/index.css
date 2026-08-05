@@ -969,8 +969,12 @@ box-shadow:
         );
 
     -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
 
     -webkit-mask-composite:xor;
     mask-composite:exclude;
@@ -1301,8 +1305,13 @@ backdrop-filter:blur(15px);
     -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+    mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
 
     -webkit-mask-composite:xor;
+    -webkit-mask-composite: xor;
+mask-composite: exclude;
 
     pointer-events:none;
 
@@ -2831,4 +2840,45 @@ p{
     }
 
 
+}/* ===== Equal Height Featured Project Cards ===== */
+@media (max-width:600px){
+
+    .projects-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .project-card{
+        display:flex;
+        flex-direction:column;
+        height:100%;
+    }
+
+    .project-image{
+        height:180px;
+        flex-shrink:0;
+    }
+
+    .project-content{
+        display:flex;
+        flex-direction:column;
+        flex:1;
+        padding:20px;
+    }
+
+    .project-content h3{
+        min-height:52px;
+        font-size:22px;
+    }
+
+    .project-content p{
+        flex:1;
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .project-content button{
+        margin-top:18px;
+        align-self:flex-start;
+    }
 }

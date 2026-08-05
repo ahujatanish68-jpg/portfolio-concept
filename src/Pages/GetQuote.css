@@ -48,7 +48,7 @@
 }
 
 .quote-hero{
-    padding:150px 0 90px;
+    padding:110px 0 90px;
     text-align:center;
 }
 
@@ -189,6 +189,15 @@
 }/* ================= GET QUOTE MOBILE FIX ================= */
 
 @media(max-width:768px){
+    .quote-hero{
+
+        padding: 85px 20px 45px;
+
+        min-height: auto;
+
+    }
+
+
 
 
 .quote-page{
