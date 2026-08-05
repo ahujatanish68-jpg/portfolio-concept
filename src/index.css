@@ -741,24 +741,23 @@ box-shadow:
 }
 
 .card1{
-    top:25px;
-    left:-30px;
+    top:-20px;
+    left:-40px;
 }
 
 .card2{
-    bottom:40px;
-    left:-25px;
+    bottom:45px;
+    left:-20px;
 }
 
 .card3{
-    right:-30px;
-    top:55%;
+    right:-10px;
+    bottom:5px;
 }
-.card4{
-    top:-20px;
-    right:40px;
 
-    animation-delay:2s;
+.card4{
+    top:-10px;
+    right:-50px;
 }
 @keyframes float{
 
@@ -2514,6 +2513,239 @@ p{
     padding-bottom:15px;
 
 }
+
+
+}/* ================= MOBILE OPTIMIZATION ================= */
+
+@media(max-width:600px){
+
+    /* ---------- HERO STATS ---------- */
+
+    .hero-stats{
+        gap:25px;
+        margin-top:25px;
+    }
+
+    .hero-stats h3{
+        font-size:28px;
+    }
+
+    .hero-stats span{
+        font-size:12px;
+    }
+
+
+    /* ---------- FLOATING CARDS ---------- */
+
+   /* Smaller floating cards for mobile */
+
+.floating-card{
+
+    padding:7px 10px;
+    border-radius:12px;
+
+    transform:scale(.60);
+
+}
+
+
+.floating-card h4{
+
+    font-size:11px;
+
+}
+
+
+.floating-card p{
+
+    font-size:9px;
+
+}
+
+    .card1{
+        top:10px;
+        left:-20px;
+    }
+
+    .card2{
+        bottom:20px;
+        left:-15px;
+    }
+
+    .card3{
+        right:-20px;
+    }
+
+    .card4{
+        right:15px;
+    }
+
+
+    /* ---------- TRUSTED BY ---------- */
+
+    .trusted{
+
+        padding:80px 5%;
+
+    }
+
+    .trusted-grid{
+
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+
+    }
+
+
+    .trusted-grid div{
+
+        padding:18px 10px;
+        font-size:15px;
+        border-radius:14px;
+
+    }
+
+
+    /* ---------- DIVISION CARDS ---------- */
+
+    .division-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .division-card{
+
+        min-height:320px;
+
+        padding:25px 20px;
+
+        border-radius:20px;
+
+    }
+
+
+    .division-icon{
+
+        width:65px;
+        height:65px;
+
+        font-size:34px;
+
+        margin-bottom:15px;
+
+    }
+
+
+    .division-card h3{
+
+        font-size:24px;
+
+        min-height:auto;
+
+    }
+
+
+    .division-card p{
+
+        font-size:14px;
+
+    }
+
+
+
+    /* ---------- WHY CHOOSE ---------- */
+
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+
+    .why-card{
+
+        padding:25px 18px;
+
+        border-radius:18px;
+
+    }
+
+
+
+    /* ---------- RECENT PROJECTS ---------- */
+
+
+    .projects-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+
+    .project-card{
+
+        border-radius:16px;
+
+    }
+
+
+    .project-image{
+
+        height:120px;
+
+        font-size:45px;
+
+    }
+
+
+    .project-content{
+
+        padding:15px;
+
+    }
+
+
+    .project-content h3{
+
+        font-size:18px;
+
+        margin:8px 0;
+
+    }
+
+
+    .project-content p{
+
+        font-size:12px;
+
+        line-height:1.5;
+
+    }
+
+
+    .project-content span{
+
+        font-size:11px;
+
+    }
+
+
+    .project-content button{
+
+        padding:8px 14px;
+
+        font-size:12px;
+
+    }
 
 
 }
