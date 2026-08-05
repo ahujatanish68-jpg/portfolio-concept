@@ -1,10 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth > 992) {
+      setMobileMenu(false);
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   const location = useLocation();
 
@@ -64,7 +77,15 @@ function Navbar() {
 
       {/* NAV LINKS */}
 
-      <ul className="nav-links">
+      <ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
+        <div
+  className="hamburger"
+  onClick={() => setMobileMenu(!mobileMenu)}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
 
         <li>
