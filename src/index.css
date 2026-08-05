@@ -2344,4 +2344,176 @@ p{
 }
 
 
+}/* ================= SMALLER MOBILE CARDS ================= */
+
+@media(max-width:768px){
+
+
+/* Division Cards */
+
+.division-card{
+
+    min-height:320px;
+
+    padding:25px 20px;
+
+    border-radius:22px;
+
+}
+
+
+.division-icon{
+
+    width:70px;
+    height:70px;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+
+.division-card h3{
+
+    font-size:24px;
+
+    min-height:auto;
+
+    margin-bottom:10px;
+
+}
+
+
+.division-card p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+/* Why Choose Cards */
+
+.why-card{
+
+    padding:25px 20px;
+
+    border-radius:18px;
+
+}
+
+
+.why-icon{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+
+.why-card h3{
+
+    font-size:20px;
+
+}
+
+
+.why-card p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* Trusted Boxes */
+
+.trusted-grid div{
+
+    padding:18px 10px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+}
+
+
+
+/* Featured Project Cards */
+
+.project-card{
+
+    border-radius:20px;
+
+}
+
+
+.project-image{
+
+    height:180px;
+
+    font-size:60px;
+
+}
+
+
+.project-content{
+
+    padding:20px;
+
+}
+
+
+.project-content h3{
+
+    font-size:22px;
+
+    margin:10px 0;
+
+}
+
+
+.project-content p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+.project-content button{
+
+    padding:11px 22px;
+
+    font-size:14px;
+
+}
+
+
+
+/* Portfolio Cards */
+
+.portfolio-card h3{
+
+    font-size:20px;
+
+}
+
+
+.portfolio-card p{
+
+    font-size:13px;
+
+    padding-bottom:15px;
+
+}
+
+
 }
