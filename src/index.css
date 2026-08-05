@@ -2745,7 +2745,7 @@ p{
 
     .why-grid{
 
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
 
         gap:18px;
 
@@ -2767,7 +2767,7 @@ p{
 
     .projects-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1fr;
 
         gap:15px;
 
