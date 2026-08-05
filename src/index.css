@@ -2041,4 +2041,307 @@ input[type="submit"],
     right:10px;
 }
 
+}/* ================= MOBILE HOME SECTIONS FIX ================= */
+
+@media(max-width:768px){
+
+
+/* ---------- GLOBAL SECTION SPACING ---------- */
+
+section{
+    overflow:hidden;
+}
+
+
+h2{
+    font-size:34px !important;
+    line-height:1.2;
+}
+
+
+p{
+    font-size:15px;
+}
+
+
+
+/* ---------- TRUSTED BY ---------- */
+
+.trusted{
+
+    padding:80px 20px;
+
+}
+
+
+.trusted-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+
+.trusted-grid div{
+
+    padding:20px 10px;
+
+    font-size:16px;
+
+}
+
+
+
+/* ---------- DIVISIONS ---------- */
+
+
+.divisions{
+
+    padding:80px 20px;
+
+}
+
+
+.divisions h2{
+
+    font-size:34px !important;
+
+}
+
+
+.division-text{
+
+    font-size:15px;
+
+    margin-bottom:40px;
+
+}
+
+
+.division-grid{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+
+.division-card{
+
+    min-height:380px;
+
+    padding:30px 25px;
+
+}
+
+
+.division-card h3{
+
+    font-size:28px;
+
+}
+
+
+.division-card p{
+
+    font-size:15px;
+
+}
+
+
+
+/* ---------- WHY CHOOSE ---------- */
+
+
+.why{
+
+    padding:80px 20px;
+
+}
+
+
+.why h2{
+
+    font-size:34px !important;
+
+}
+
+
+.why-text{
+
+    font-size:15px;
+
+}
+
+
+.why-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.why-card{
+
+    padding:30px 20px;
+
+}
+
+
+
+/* ---------- FEATURED PROJECTS ---------- */
+
+
+.featured-projects{
+
+    padding:80px 20px;
+
+}
+
+
+.featured-projects h2{
+
+    font-size:34px !important;
+
+}
+
+
+.projects-grid{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+
+.project-image{
+
+    height:220px;
+
+    font-size:70px;
+
+}
+
+
+.project-content{
+
+    padding:25px;
+
+}
+
+
+.project-content h3{
+
+    font-size:24px;
+
+}
+
+
+
+/* ---------- ABOUT ---------- */
+
+
+.about{
+
+    padding:80px 20px;
+
+}
+
+
+.about h2{
+
+    font-size:34px !important;
+
+}
+
+
+.about p{
+
+    font-size:15px;
+
+}
+
+
+.about-stats{
+
+    gap:30px;
+
+}
+
+
+.about-stats h3{
+
+    font-size:32px;
+
+}
+
+
+
+/* ---------- PORTFOLIO ---------- */
+
+
+.portfolio{
+
+    padding:80px 20px;
+
+}
+
+
+.portfolio h2{
+
+    font-size:34px !important;
+
+}
+
+
+.portfolio-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.portfolio-card{
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ---------- CONTACT ---------- */
+
+
+.contact{
+
+    padding:80px 20px;
+
+}
+
+
+.contact h2{
+
+    font-size:42px !important;
+
+}
+
+
+.contact p{
+
+    font-size:16px;
+
+}
+
+
+.contact-form input,
+.contact-form textarea{
+
+    font-size:15px;
+
+}
+
+
 }
