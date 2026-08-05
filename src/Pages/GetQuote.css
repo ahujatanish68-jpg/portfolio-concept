@@ -104,9 +104,10 @@
 .quote-form select{
     width:100%;
     padding:16px 18px;
-    border-radius:12px;
+    border-radius:10px;
     border:none;
-    background:#fff;
+    height: 5vh;
+    background:#ecdbdb;
     color:#111;
     font-size:16px;
     outline:none;
@@ -114,12 +115,14 @@
 }
 .quote-form textarea{
     width:100%;
-    background:#ffffff;
+    background:#ecdbdb;
     color:#111;
     border:none;
+    height: 12vh;
+
 
     padding:16px 18px;
-    border-radius:12px;
+    border-radius:10px;
 
     font-size:16px;
     outline:none;
