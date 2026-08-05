@@ -3,85 +3,82 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-
-useEffect(() => {
-  const handleResize = () => {
-    if (window.innerWidth > 992) {
-      setMobileMenu(false);
-    }
-  };
-
-  window.addEventListener("resize", handleResize);
-
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+  const [mobileServices, setMobileServices] = useState(false);
 
   const location = useLocation();
-
   const navigate = useNavigate();
 
-
- const scrollToSection = (id) => {
-
-  if (location.pathname !== "/") {
-
-    navigate("/", {
-      state: {
-        section: id
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 992) {
+        setMobileMenu(false);
+        setMobileServices(false);
       }
-    });
+    };
 
-  } else {
+    window.addEventListener("resize", handleResize);
 
-    const section = document.getElementById(id);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    if (section) {
+  const scrollToSection = (id) => {
+    setMobileMenu(false);
 
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+    if (location.pathname !== "/") {
+      navigate("/", {
+        state: {
+          section: id,
+        },
       });
+    } else {
+      const section = document.getElementById(id);
 
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     }
-
-  }
-
-};
-
-
+  };
   return (
 
     <nav className="navbar">
 
+  <Link to="/" className="logo">
+    <span>AD</span>
 
-      {/* LOGO */}
+    <div>
+      <h2>AD Media</h2>
+      <p>Networks</p>
+    </div>
+  </Link>
 
-      <Link to="/" className="logo">
-  <span>AD</span>
-
-  <div>
-    <h2>AD Media</h2>
-    <p>Networks</p>
+  <div
+    className={`hamburger ${mobileMenu ? "open" : ""}`}
+    onClick={() => setMobileMenu(!mobileMenu)}
+  >
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-</Link>
 
-{/* Hamburger */}
-<div
-  className="hamburger"
-  onClick={() => setMobileMenu(!mobileMenu)}
->
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-<ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
+  <ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
 
 
 
+        <li>
+  <span
+    className="nav-item"
+    onClick={() => {scrollToSection("home")
+      setMobileMenu(false);}
+    }
+  >
+    Home
+  </span>
+</li>
         {/* SERVICES */}
 
         <li
@@ -110,19 +107,22 @@ useEffect(() => {
                 <h3>📰 Media & News</h3>
 
 
-                <Link to="/media">
+                <Link to="/media"
+                onClick={() => setMobileMenu(false)}>
                   Photography
                 </Link>
 
-                <Link to="/media">
+                <Link to="/media"
+                onClick={() => setMobileMenu(false)}>
                   Videography
                 </Link>
 
-                <Link to="/media">
+                <Link to="/media"
+                onClick={() => setMobileMenu(false)}>
                   PR & Branding
                 </Link>
 
-                <Link to="/media">
+                <Link to="/media"onClick={() => setMobileMenu(false)}>
                   Content Creation
                 </Link>
 
@@ -136,19 +136,23 @@ useEffect(() => {
                 <h3>💻 Digital Technology</h3>
 
 
-                <Link to="/digital">
+                <Link to="/digital"
+                onClick={() => setMobileMenu(false)}>
                   Website Development
                 </Link>
 
-                <Link to="/digital">
+                <Link to="/digital"
+                onClick={() => setMobileMenu(false)}>
                   App Development
                 </Link>
 
-                <Link to="/digital">
+                <Link to="/digital"
+                onClick={() => setMobileMenu(false)}>
                   AI Solutions
                 </Link>
 
-                <Link to="/digital">
+                <Link to="/digital"
+                onClick={() => setMobileMenu(false)}>
                   SEO
                 </Link>
 
@@ -162,19 +166,23 @@ useEffect(() => {
                 <h3>🎵 Music Production</h3>
 
 
-                <Link to="/music">
+                <Link to="/music"
+                onClick={() => setMobileMenu(false)}>
                   Recording
                 </Link>
 
-                <Link to="/music">
+                <Link to="/music"
+                onClick={() => setMobileMenu(false)}>
                   Mixing
                 </Link>
 
-                <Link to="/music">
+                <Link to="/music"
+                onClick={() => setMobileMenu(false)}>
                   Mastering
                 </Link>
 
-                <Link to="/music">
+                <Link to="/music"
+                onClick={() => setMobileMenu(false)}>
                   Podcast Production
                 </Link>
 
@@ -194,8 +202,11 @@ useEffect(() => {
 
         <li>
 
-          <span
- onClick={() => scrollToSection("about")}
+         <span
+  className="nav-item"
+  onClick={() => {scrollToSection("about")
+    setMobileMenu(false);}
+  }
 >
  About
 </span>
@@ -207,8 +218,11 @@ useEffect(() => {
 
         <li>
 
-          <span
- onClick={() => scrollToSection("portfolio")}
+<span
+  className="nav-item"
+  onClick={() => {scrollToSection("portfolio")
+    setMobileMenu(false);}
+  }
 >
  Portfolio
 </span>
@@ -221,7 +235,10 @@ useEffect(() => {
         <li>
 
           <span
- onClick={() => scrollToSection("contact")}
+  className="nav-item"
+  onClick={() => {scrollToSection("contact")
+    setMobileMenu(false);}
+  }
 >
  Contact
 </span>
@@ -234,7 +251,8 @@ useEffect(() => {
 
 
 
-      <Link to="/get-quote" className="nav-btn">
+      <Link to="/get-quote"
+      onClick={() => setMobileMenu(false)} className="nav-btn">
   Get Quote
 </Link>
 

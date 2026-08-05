@@ -274,11 +274,24 @@
     .navbar{
         width:95%;
         padding:12px 20px;
+        display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
     }
 
     .hamburger{
-        display:flex;
-    }
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+
+    margin-left:auto;
+
+    cursor:pointer;
+
+    z-index:10001;
+}
 
     .nav-btn{
         display:none;
