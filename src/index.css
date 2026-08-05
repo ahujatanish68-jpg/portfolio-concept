@@ -1535,7 +1535,9 @@ backdrop-filter:blur(15px);
 
 .digital-hero h1{
 
-    font-size:42px;
+    font-size:34px;
+
+    line-height:1.2;
 
 }
 
@@ -1626,10 +1628,31 @@ backdrop-filter:blur(15px);
 
 .music-hero h1{
 
-    font-size:42px;
+    font-size:34px;
+
+    line-height:1.2;
+
+}
+.digital-hero,
+.music-hero{
+
+    min-height:90vh;
+
+    padding:120px 25px 50px;
+
+    text-align:center;
 
 }
 
+
+.digital-hero p,
+.music-hero p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
 .music-hero p{
 
     font-size:18px;
@@ -2177,17 +2200,39 @@ p{
 
 .why-grid{
 
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
 
 }
 
 
 .why-card{
 
-    padding:30px 20px;
+    padding:18px 12px;
 
 }
 
+
+.why-icon{
+
+    font-size:30px;
+
+}
+
+
+.why-card h3{
+
+    font-size:17px;
+
+}
+
+
+.why-card p{
+
+    font-size:12px;
+
+}
 
 
 /* ---------- FEATURED PROJECTS ---------- */
@@ -2298,14 +2343,39 @@ p{
 
 .portfolio-grid{
 
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
 
 }
 
 
 .portfolio-card{
 
-    margin-bottom:20px;
+    border-radius:16px;
+
+}
+
+
+.portfolio-image{
+
+    height:100px;
+
+    font-size:35px;
+
+}
+
+
+.portfolio-card h3{
+
+    font-size:17px;
+
+}
+
+
+.portfolio-card p{
+
+    font-size:12px;
 
 }
 
@@ -2352,9 +2422,11 @@ p{
 
 .division-card{
 
-    min-height:320px;
+    min-height:280px;
 
-    padding:25px 20px;
+    padding:20px 15px;
+
+
 
     border-radius:22px;
 
@@ -2363,19 +2435,18 @@ p{
 
 .division-icon{
 
-    width:70px;
-    height:70px;
+    width:60px;
 
-    font-size:38px;
+    height:60px;
 
-    margin-bottom:20px;
+    font-size:32px;
 
 }
 
 
 .division-card h3{
 
-    font-size:24px;
+    font-size:22px;
 
     min-height:auto;
 
@@ -2386,7 +2457,7 @@ p{
 
 .division-card p{
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.6;
 
@@ -2522,17 +2593,29 @@ p{
     /* ---------- HERO STATS ---------- */
 
     .hero-stats{
-        gap:25px;
-        margin-top:25px;
-    }
 
-    .hero-stats h3{
-        font-size:28px;
-    }
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    gap:25px;
+    flex-wrap:nowrap;
 
-    .hero-stats span{
-        font-size:12px;
-    }
+}
+
+.hero-stats h3{
+
+    font-size:28px;
+
+}
+
+.hero-stats span{
+
+    font-size:11px;
+    white-space:nowrap;
+
+}
+
+    
 
 
     /* ---------- FLOATING CARDS ---------- */

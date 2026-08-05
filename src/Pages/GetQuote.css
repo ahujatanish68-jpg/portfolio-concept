@@ -186,4 +186,175 @@
     font-size:42px;
 }
 
+}/* ================= GET QUOTE MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+
+.quote-page{
+
+    min-height:auto;
+
+    padding:110px 20px 60px;
+
+}
+
+
+.quote-container{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+}
+
+
+/* Heading */
+
+.quote-page h1{
+
+    font-size:38px;
+
+    line-height:1.2;
+
+    text-align:center;
+
+}
+
+
+.quote-page h2{
+
+    font-size:28px;
+
+}
+
+
+.quote-page p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    text-align:center;
+
+}
+
+
+/* Form */
+
+.quote-form{
+
+    width:100%;
+
+    padding:25px 18px;
+
+    border-radius:20px;
+
+}
+
+
+.quote-form input,
+.quote-form textarea,
+.quote-form select{
+
+    width:100%;
+
+    padding:14px 15px;
+
+    font-size:14px;
+
+    border-radius:10px;
+
+}
+
+
+.quote-form textarea{
+
+    min-height:120px;
+
+}
+
+
+/* Button */
+
+.quote-form button,
+.quote-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:15px;
+
+    border-radius:12px;
+
+}
+
+
+
+/* Any cards/info section */
+
+.quote-info{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+.quote-info div{
+
+    padding:18px;
+
+    border-radius:15px;
+
+}
+
+
+}
+
+
+
+/* Smaller phones */
+
+@media(max-width:480px){
+
+
+.quote-page{
+
+    padding:100px 15px 50px;
+
+}
+
+
+.quote-page h1{
+
+    font-size:32px;
+
+}
+
+
+.quote-form{
+
+    padding:20px 15px;
+
+}
+
+
+.quote-form input,
+.quote-form textarea,
+.quote-form select{
+
+    font-size:13px;
+
+    padding:12px;
+
+}
+
+
 }
