@@ -369,6 +369,7 @@ box-shadow:
     text-align:center;
 
     position:relative;
+    margin-bottom:1px;
     
 
 }
@@ -376,12 +377,12 @@ box-shadow:
 .portfolio h4{
     color:#ef4444;
     letter-spacing:2px;
-    margin-bottom:15px;
+    margin-bottom:1px;
 }
 
 .portfolio h2{
     font-size:64px;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 .portfolio-text{
@@ -397,7 +398,7 @@ box-shadow:
 
     gap:28px;
 
-    margin-top:50px;
+    margin-top:20px;
 
 }
 .portfolio-card{
@@ -418,6 +419,7 @@ box-shadow:
     border:1px solid rgba(255,255,255,.15);
 
     transition:.4s;
+    margin-top:none;
 
 }
 .portfolio-card h3{
