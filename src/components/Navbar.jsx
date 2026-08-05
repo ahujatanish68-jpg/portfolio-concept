@@ -23,8 +23,13 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const scrollToSection = (id) => {
+  const closeMobile = () => {
     setMobileMenu(false);
+    setMobileServices(false);
+  };
+
+  const scrollToSection = (id) => {
+    closeMobile();
 
     if (location.pathname !== "/") {
       navigate("/", {
@@ -43,230 +48,192 @@ function Navbar() {
       }
     }
   };
-  return (
 
+  return (
     <nav className="navbar">
 
-  <Link to="/" className="logo">
-    <span>AD</span>
+      {/* Logo */}
 
-    <div>
-      <h2>AD Media</h2>
-      <p>Networks</p>
-    </div>
-  </Link>
+      <Link to="/" className="logo" onClick={closeMobile}>
+        <span>AD</span>
 
-  <div
-    className={`hamburger ${mobileMenu ? "open" : ""}`}
-    onClick={() => setMobileMenu(!mobileMenu)}
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+        <div>
+          <h2>AD Media</h2>
+          <p>Networks</p>
+        </div>
+      </Link>
 
-  <ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
+      {/* Hamburger */}
 
+      <button
+        className={`hamburger ${mobileMenu ? "open" : ""}`}
+        onClick={() => setMobileMenu(!mobileMenu)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
+      {/* Navigation */}
+
+      <ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
 
         <li>
-  <span
-    className="nav-item"
-    onClick={() => {scrollToSection("home")
-      setMobileMenu(false);}
-    }
-  >
-    Home
-  </span>
-</li>
+          <span
+            className="nav-item"
+            onClick={() => scrollToSection("home")}
+          >
+            Home
+          </span>
+        </li>
+
         {/* SERVICES */}
 
         <li
-
           className="services-item"
-
-          onMouseEnter={() => setMenuOpen(true)}
-
-          onMouseLeave={() => setMenuOpen(false)}
-
+          onMouseEnter={() => {
+            if (window.innerWidth > 992) {
+              setMenuOpen(true);
+            }
+          }}
+          onMouseLeave={() => {
+            if (window.innerWidth > 992) {
+              setMenuOpen(false);
+            }
+          }}
         >
 
           <span
-  onClick={() => {
-    if (window.innerWidth <= 992) {
-      setMobileServices(!mobileServices);
-    }
-  }}
->
-  Services ▾
-</span>
+            className="nav-item"
+            onClick={() => {
+              if (window.innerWidth <= 992) {
+                setMobileServices(!mobileServices);
+              }
+            }}
+          >
+            Services {window.innerWidth <= 992 ? (mobileServices ? "▲" : "▼") : "▾"}
+          </span>
 
+          {/* Desktop Mega Menu */}
 
-         {menuOpen && window.innerWidth > 992 && (
-
+          {menuOpen && (
             <div className="mega-menu">
-
 
               <div className="mega-column">
 
                 <h3>📰 Media & News</h3>
 
-
-                <Link to="/media"
-                onClick={() => setMobileMenu(false)}>
-                  Photography
-                </Link>
-
-                <Link to="/media"
-                onClick={() => setMobileMenu(false)}>
-                  Videography
-                </Link>
-
-                <Link to="/media"
-                onClick={() => setMobileMenu(false)}>
-                  PR & Branding
-                </Link>
-
-                <Link to="/media"onClick={() => setMobileMenu(false)}>
-                  Content Creation
-                </Link>
-
+                <Link to="/media">Photography</Link>
+                <Link to="/media">Videography</Link>
+                <Link to="/media">PR & Branding</Link>
+                <Link to="/media">Content Creation</Link>
 
               </div>
-
-
 
               <div className="mega-column">
 
                 <h3>💻 Digital Technology</h3>
 
-
-                <Link to="/digital"
-                onClick={() => setMobileMenu(false)}>
-                  Website Development
-                </Link>
-
-                <Link to="/digital"
-                onClick={() => setMobileMenu(false)}>
-                  App Development
-                </Link>
-
-                <Link to="/digital"
-                onClick={() => setMobileMenu(false)}>
-                  AI Solutions
-                </Link>
-
-                <Link to="/digital"
-                onClick={() => setMobileMenu(false)}>
-                  SEO
-                </Link>
-
+                <Link to="/digital">Website Development</Link>
+                <Link to="/digital">App Development</Link>
+                <Link to="/digital">AI Solutions</Link>
+                <Link to="/digital">SEO</Link>
 
               </div>
-
-
 
               <div className="mega-column">
 
                 <h3>🎵 Music Production</h3>
 
-
-                <Link to="/music"
-                onClick={() => setMobileMenu(false)}>
-                  Recording
-                </Link>
-
-                <Link to="/music"
-                onClick={() => setMobileMenu(false)}>
-                  Mixing
-                </Link>
-
-                <Link to="/music"
-                onClick={() => setMobileMenu(false)}>
-                  Mastering
-                </Link>
-
-                <Link to="/music"
-                onClick={() => setMobileMenu(false)}>
-                  Podcast Production
-                </Link>
-
+                <Link to="/music">Recording</Link>
+                <Link to="/music">Mixing</Link>
+                <Link to="/music">Mastering</Link>
+                <Link to="/music">Podcast Production</Link>
 
               </div>
 
-
             </div>
-
           )}
 
+          {/* Mobile Services */}
+
+          {mobileServices && (
+            <div className="mobile-services">
+
+              <Link to="/media" onClick={closeMobile}>
+                📰 Media & News
+              </Link>
+
+              <Link to="/digital" onClick={closeMobile}>
+                💻 Digital Technology
+              </Link>
+
+              <Link to="/music" onClick={closeMobile}>
+                🎵 Music Production
+              </Link>
+
+            </div>
+          )}
 
         </li>
-
-
-
+        {/* ABOUT */}
 
         <li>
-
-         <span
-  className="nav-item"
-  onClick={() => {scrollToSection("about")
-    setMobileMenu(false);}
-  }
->
- About
-</span>
-
-        </li>
-
-
-
-
-        <li>
-
-<span
-  className="nav-item"
-  onClick={() => {scrollToSection("portfolio")
-    setMobileMenu(false);}
-  }
->
- Portfolio
-</span>
-
-        </li>
-
-
-
-
-        <li>
-
           <span
-  className="nav-item"
-  onClick={() => {scrollToSection("contact")
-    setMobileMenu(false);}
-  }
->
- Contact
-</span>
-
+            className="nav-item"
+            onClick={() => scrollToSection("about")}
+          >
+            About
+          </span>
         </li>
 
+        {/* PORTFOLIO */}
+
+        <li>
+          <span
+            className="nav-item"
+            onClick={() => scrollToSection("portfolio")}
+          >
+            Portfolio
+          </span>
+        </li>
+
+        {/* CONTACT */}
+
+        <li>
+          <span
+            className="nav-item"
+            onClick={() => scrollToSection("contact")}
+          >
+            Contact
+          </span>
+        </li>
+
+        {/* Mobile Get Quote */}
+
+        <li className="mobile-quote">
+          <Link
+            to="/get-quote"
+            className="mobile-quote-btn"
+            onClick={closeMobile}
+          >
+            Get Quote
+          </Link>
+        </li>
 
       </ul>
 
+      {/* Desktop Get Quote */}
 
-
-
-      <Link to="/get-quote"
-      onClick={() => setMobileMenu(false)} className="nav-btn">
-  Get Quote
-</Link>
-
+      <Link
+        to="/get-quote"
+        className="nav-btn"
+      >
+        Get Quote
+      </Link>
 
     </nav>
-
   );
-
 }
-
 
 export default Navbar;
