@@ -91,13 +91,18 @@ function Navbar() {
 
         >
 
-          <span>
-            Services ▾
-          </span>
+          <span
+  onClick={() => {
+    if (window.innerWidth <= 992) {
+      setMobileServices(!mobileServices);
+    }
+  }}
+>
+  Services ▾
+</span>
 
 
-
-          {menuOpen && (
+         {menuOpen && window.innerWidth > 992 && (
 
             <div className="mega-menu">
 
